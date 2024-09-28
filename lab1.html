@@ -1,0 +1,339 @@
+tham khảo file lab 1 như sau: <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1 - User Account Management</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Wrapper to limit content width */
+        .wrapper {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: white;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content section */
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tabs button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .tabs button.active {
+            background-color: #0056b3;
+        }
+
+        .tabs button:hover {
+            background-color: #0056b3;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .requirement-content, .design-content, .implement-content {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Form Styling */
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .preview-image {
+            margin-top: 10px;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .wrapper {
+                padding: 10px;
+            }
+
+            .tabs button {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+
+            form {
+                grid-gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>Lab 1: User Account Management</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="labs.html">Labs</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Lab 1</h2>
+                <div class="tabs">
+                    <button class="tab-button active" onclick="showTab('requirement')">Requirement</button>
+                    <button class="tab-button" onclick="showTab('design')">Design</button>
+                    <button class="tab-button" onclick="showTab('implement')">Implement</button>
+                </div>
+
+                <!-- Requirement Tab Content -->
+                <div id="requirement" class="tab-content active">
+                    <h3>Requirement</h3>
+                    <div class="requirement-content">
+                        <p>Design and implement a User Account Management system with the following features:</p>
+                        <ul>
+                            <li>User account creation form.</li>
+                            <li>Fields for username, password, email, and role selection (Admin/User).</li>
+                            <li>Profile picture upload with preview functionality.</li>
+                            <li>Read-only fields for "Account Created At" and "Last Updated At".</li>
+                            <li>Basic form validation for username, password, email, and role.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Design Tab Content -->
+                <div id="design" class="tab-content">
+                    <h3>Design</h3>
+                    <div class="design-content">
+                        <p>Design Resources:</p>
+                        <ul>
+                            <li><a href="assets/img/design-paper.jpg" target="_blank">Paper Design (Image)</a></li>
+                            <li><a href="assets/img/design-html.jpg" target="_blank">HTML Design (Screenshot)</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Implement Tab Content -->
+                <div id="implement" class="tab-content">
+                    <h3>Implement</h3>
+                    <div class="implement-content">
+                        <!-- User Account Form -->
+                        <form id="userForm" action="/submit" method="POST" enctype="multipart/form-data">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Enter your username" maxlength="255" required>
+                            <div class="error" id="usernameError"></div>
+
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" maxlength="255" required>
+                            <input type="checkbox" id="showPassword"> Show Password
+                            <div class="error" id="passwordError"></div>
+
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" maxlength="255" required>
+                            <div class="error" id="emailError"></div>
+
+                            <label for="fullname">Full Name (Optional)</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+
+                            <label for="role">Role</label>
+                            <select id="role" name="role" required>
+                                <option value="" disabled selected>Select your role</option>
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                            </select>
+                            <div class="error" id="roleError"></div>
+
+                            <label for="profilePicture">Profile Picture</label>
+                            <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                            <img id="imagePreview" class="preview-image" src="" alt="Profile Picture Preview" style="display:none;">
+
+                            <label for="createdAt">Account Created At</label>
+                            <input type="text" id="createdAt" name="createdAt" value="2024-09-28 12:00:00" readonly class="readonly-field">
+
+                            <label for="updatedAt">Last Updated At</label>
+                            <input type="text" id="updatedAt" name="updatedAt" value="2024-09-28 12:00:00" readonly class="readonly-field">
+
+                            <div class="form-buttons">
+                                <button type="submit" id="submitButton">Create Account</button>
+                                <button type="button" id="cancelButton">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            var contents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+
+            // Remove active class from all buttons
+            var buttons = document.getElementsByClassName('tab-button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+
+            // Add active class to the clicked button
+            event.currentTarget.classList.add('active');
+        }
+
+        // Toggle password visibility
+        document.getElementById('showPassword').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            passwordField.type = this.checked ? 'text' : 'password';
+        });
+
+        // Preview profile picture
+        document.getElementById('profilePicture').addEventListener('change', function (event) {
+            const imagePreview = document.getElementById('imagePreview');
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

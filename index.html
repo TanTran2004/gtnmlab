@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>Welcome to My Personal Website</h1>
+            <nav>
+                <a href="index.html" class="nav-button">Home</a>
+                <button onclick="showSection('about')" class="nav-button">About</button>
+                <button onclick="showSection('labs')" class="nav-button">Labs</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Home Section -->
+            <section id="home" class="content-section">
+                <h2>Home</h2>
+                <p>Welcome! This is a sample personal website. Explore the About section to know more about me or visit the Labs section to view the projects.</p>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="content-section" style="display: none;">
+                <h2>About Me</h2>
+                <p>This is where a brief résumé or biography can be displayed.</p>
+                <ul>
+                    <li>Name: John Doe</li>
+                    <li>Profession: Web Developer</li>
+                    <li>Skills: HTML, CSS, JavaScript</li>
+                </ul>
+            </section>
+
+            <!-- Labs Section -->
+            <section id="labs" class="content-section" style="display: none;">
+                <h2>Labs</h2>
+                <div class="lab-buttons">
+                    <a href="lab1.html" class="lab-button">Lab 1</a>
+                    <a href="lab2.html" class="lab-button">Lab 2</a>
+                    <a href="lab3.html" class="lab-button">Lab 3</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
