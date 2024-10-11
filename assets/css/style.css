@@ -6,7 +6,7 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
@@ -35,7 +35,7 @@ header h1 {
 }
 
 nav {
-    margin-top: 15px;
+    margin-top: 0px;
 }
 
 .nav-button {
