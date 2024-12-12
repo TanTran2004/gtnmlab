@@ -1,0 +1,251 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Container for both layouts */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title styling for both layouts */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for the first design */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Card styling for the first design */
+.card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-subtitle {
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.button.continue {
+    background-color: #0073e6;
+}
+
+.button.continue:hover {
+    background-color: #005bb5;
+}
+
+.button.guide {
+    background-color: #ccc;
+    color: #333;
+}
+
+.button.guide:hover {
+    background-color: #aaa;
+}
+
+/* Form styling for the second design */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.label {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.description {
+    font-style: italic;
+    color: #999;
+}
+
+.submit-button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1a2b38;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #15222d;
+}
+.header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.form-section, .test-cases {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.test-cases {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.test-case {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.test-case label {
+    width: 30%;
+}
+
+.test-case input {
+    width: 65%;
+}
+
+.update-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.update-button:hover {
+    background-color: #0056b3;
+}
+.custom-challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444649; /* Adjust color based on your image */
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 4px 4px 0 0; /* Rounded top corners, adjust as needed */
+    height: 70px;
+  }
+  
+  .close-button {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+  }
+  
+  .close-button:hover {
+    color: #ccc; /* Hover color for the close button */
+  }
+  

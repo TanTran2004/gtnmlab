@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Custom Challenge</title>
+    <link rel="stylesheet" href="../22130247_TranNgocTan_lab4/header.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin:auto;
+        }
+
+        .modal {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #444649; /* Adjust color based on your image */
+            color: white;
+            padding: 10px 15px;
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 4px 4px 0 0; /* Rounded top corners, adjust as needed */
+            height: 70px;    
+        }
+        .close-button {
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            line-height: 1;
+        }
+  
+        .close-button:hover {
+            color: #ccc; /* Hover color for the close button */
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .input,
+        .select,
+        .description-input,
+        .dropdown_re4 {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 5px;
+            margin: 8px 0;
+        }
+
+        .toolbar-button {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background-color: #eee;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .textarea-container {
+            margin-top: 10px;
+        }
+
+        #text-area {
+            width: 100%;
+            height: 150px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .test-case-label {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .test-case {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .test-case-input,
+        .output-input {
+            width: 45%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .arrow {
+            font-size: 20px;
+        }
+
+        .update-button {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .update-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 style="color: white;">Labs</h1>
+            <nav>
+                <a href="../22130247_TranNgocTan_lab1/index.html" class="nav-button">Home</a>
+                <a href="../22130247_TranNgocTan_lab1/about.html" class="nav-button">About</a>
+                <a href="../22130247_TranNgocTan_lab1/lab.html" class="nav-button active">Labs</a>
+            </nav>
+        </header>
+        <main>
+            <section class="content-section">
+                <div class="lab-buttons">
+                    <a href="../22130247_TranNgocTan_lab1/lab1.html" class="lab-button">Lab 1</a>
+                    <a href="../22130247_TranNgocTan_lab2/lab2.html" class="lab-button">Lab 2</a>
+                    <a href="../22130247_TranNgocTan_lab3/lab3.html" class="lab-button">Lab 3</a>
+                    <a href="../22130247_TranNgocTan_lab4/lab4.html" class="lab-button ">Lab 4</a>
+                    <a href="../22130247_TranNgocTan_lab5/lab5.html" class="lab-button">Lab 5</a>
+                    <a href="../22130247_TranNgocTan_lab6/lab6.html" class="lab-button active">Lab 6</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="custom">
+        <span>Edit Custom Challenge</span>
+        <a href="demo.html">
+            <span class="close-button">&times;</span>
+          </a>
+      </div>
+    <div class="modal">
+        
+        <div class="form-container">
+            <p style="color: gray; font-size: 14px;">Last modified by <em>sontth1@fpt.com</em> on Apr 01 2024</p>
+            <input type="text" id="title" placeholder="DSA ET Opt7 01" class="input">
+
+            <div class="frame">
+                <div class="field">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty" class="select">
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+
+                <div class="description-row">
+                    <p class="short-description">Short description:</p>
+                    <input type="text" placeholder="This is a private challenge" class="input description-input">
+                </div>
+            </div>
+
+            <div class="container_re3">
+                <!-- Toolbar with icons -->
+                <div class="toolbar">
+                    <button class="toolbar-button">Normal</button>
+                    <button class="toolbar-button bold">B</button>
+                    <button class="toolbar-button italic">I</button>
+                    <button class="toolbar-button underline">U</button>
+                    <button class="toolbar-button quote">❞</button>
+                    <button class="toolbar-button list">•</button>
+                    <button class="toolbar-button list-numbered">☰</button>
+                    <button class="toolbar-button list-numbered">⁝</button>
+                    <button class="toolbar-button image">🖼️</button>
+                    <button class="toolbar-button link">🔗</button>
+                    <button class="toolbar-button code">⇹</button>
+                </div>
+
+                <!-- Textarea -->
+                <div class="textarea-container">
+                    <textarea id="text-area">Write a program to count the number of elements as odd numbers in the array
+Example: Array A= { 12, 31, 25, 17, 40, 10, 29 }
+=> Number of elements as odd number in array A is : 4</textarea>
+                </div>
+            </div>
+
+            <button class="open-non">✔ Starter code will automatically be generated for all 18 coding languages</button>
+
+            <div class="row">
+                <div class="column">
+                    <label class="label">Input type</label>
+                    <select class="dropdown_re4">
+                        <option>Array of integers</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <label class="label">Output type</label>
+                    <select class="dropdown_re4">
+                        <option>Integer</option>
+                    </select>
+                </div>
+            </div>
+
+            <label class="label test-case-label">Required test cases</label>
+
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="12, 31, 25, 17, 40, 10, 29">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="4">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1,2,3,4,5,6,7,8,9,10">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="5">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="10">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="0">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="0">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="1">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="0, 2, 4, 6, 8. 10">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="0">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1, 3, 5">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="3">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="Input 8">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="0">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="8, 8, 8, 8, 8, 8, 8, 8, 8, 8">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="0">
+            </div>
+            <div class="test-case">
+                <input type="text" class="test-case-input" value="1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1">
+                <div class="arrow">→</div>
+                <input type="text" class="output-input" value="13">
+            </div>
+            <button class="update-button" onclick="alert('Challenge updated!')">Update custom challenge</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

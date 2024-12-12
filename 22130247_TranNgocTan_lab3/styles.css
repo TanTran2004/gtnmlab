@@ -1,0 +1,191 @@
+/* Thiết lập kiểu cơ bản */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c7c9cc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color:rgb(42, 132, 235);
+  margin-top: 20px;
+}
+h2 {
+  text-align: center;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Kiểu cho trang danh sách môn học */
+.materials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.material-card {
+  width: 250px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.material-card:hover {
+  transform: scale(1.05);
+}
+
+.material-card h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.material-card button {
+  font-size: 14px;
+  padding: 10px 20px;
+  color: #0056b3;
+  background-color: #fff;
+  border: 1px solid #0056b3;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.material-card button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Kiểu cho trang chi tiết bài học */
+.lessons-container {
+  display: flex;
+  justify-content: space-between; /* Giãn đều nội dung sang 2 bên */
+
+  height: 520px;
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Thêm khoảng cách bên trong */
+  background-color: #fff; /* Nền trắng (tuỳ chỉnh) */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f5f5f5;
+  padding: 0px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover {
+  background-color: #e0e0e0;
+}
+
+.sidebar li.active {
+  background-color: #d0e2ff;
+  color: #0056b3;
+  font-weight: bold;
+}
+
+.content-area3 {
+  flex-grow: 1;
+  background-color: #ffffff;
+}
+
+.content-area3 h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#content-display {
+  color: #666;
+}
+
+#content-display p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Nút quay lại */
+.back-button {
+  display: inline-block;
+
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #0056b3;
+  background-color: #fff;
+  border: 1px solid #0056b3;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+/* Container cho nút Back to list */
+.back-button-container {
+display: flex;
+justify-content: center;
+margin-top: auto;
+padding: 20px;
+}
+
+/* Kiểu dáng cho nút Back to list */
+.back-button {
+font-size: 14px;
+color: #0056b3;
+background-color: #ffffff;
+border: 1px solid #0056b3;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+background-color: #0056b3;
+color: #ffffff;
+}
+

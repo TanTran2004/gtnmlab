@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson Content</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../22130247_TranNgocTan_lab1/lab1.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+        <h1 style="color: white;">Labs</h1>
+        <nav>
+            <a href="../22130247_TranNgocTan_lab1/index.html" class="nav-button">Home</a>
+            <a href="../22130247_TranNgocTan_lab1/about.html" class="nav-button">About</a>
+            <a href="../22130247_TranNgocTan_lab1/lab.html" class="nav-button active">Labs</a>
+        </nav>
+    </header>
+    <main>
+        <section class="content-section">
+            <div class="lab-buttons">
+                <a href="../22130247_TranNgocTan_lab1/lab1.html" class="lab-button">Lab 1</a>
+                <a href="../22130247_TranNgocTan_lab2/lab2.html" class="lab-button">Lab 2</a>
+                <a href="../22130247_TranNgocTan_lab3/lab3.html" class="lab-button active ">Lab 3</a>
+                <a href="lab4.html" class="lab-button">Lab 4</a>
+                <a href="lab5.html" class="lab-button">Lab 5</a>
+                <a href="lab6.html" class="lab-button">Lab 6</a>
+            </div>
+        </section>
+    </main>
+  </div>
+  <div class="lessons-container">
+    <div class="sidebar">
+      <h2>Lessons</h2>
+      <ul>
+        <li onclick="showTab(event, 'giaoTrinh')">Giáo trình</li>
+        <li onclick="showTab(event, 'baiTap')">Bài tập</li>
+        <li onclick="showTab(event, 'taiLieu')">Tài liệu tham khảo</li>
+      </ul>
+    </div>
+
+    <div class="content-area3">
+      <!-- Giáo Trình Tab -->
+      <div id="giaoTrinh" class="tab-content active">
+        <h2>Giáo Trình</h2>
+        <iframe src="tailieu/Lab 2_3_UniformedSearch.pdf" width="100%" height="1000px"></iframe>
+      </div>
+
+      <!-- Bài Tập Tab -->
+      <div id="baiTap" class="tab-content">
+        <h2>Bài tập</h2>
+        <iframe src="tailieu/Lab03_22130247_TranNgocTan.pdf" width="100%" height="600px"></iframe>
+      </div>
+
+      <!-- Tài Liệu Tham Khảo Tab -->
+      <div id="taiLieu" class="tab-content">
+        <h2>Tài liệu tham khảo</h2>
+        <iframe src="tailieu/Week 2 - Web UI design - introduction.pdf" width="100%" height="600px"></iframe>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-button-container">
+      <button class="back-button" onclick="goBack()">Back to list</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to switch between tabs
+    function showTab(event, tabId) {
+      event.preventDefault();
+
+      // Remove 'active' class from all tab contents
+      var tabs = document.getElementsByClassName("tab-content");
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+      }
+
+      // Add 'active' class to the selected tab
+      var selectedTab = document.getElementById(tabId);
+      if (selectedTab) {
+        selectedTab.classList.add("active");
+      }
+    }
+
+    // Function to go back to the previous page
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

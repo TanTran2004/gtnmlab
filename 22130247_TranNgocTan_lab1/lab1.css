@@ -1,0 +1,281 @@
+/* Common styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+}
+
+header {
+  display: flex;
+  flex-direction: column; /* Căn chỉnh nội dung theo chiều dọc */
+  align-items: center;     /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  text-align: center;      /* Căn giữa text */
+  padding: 20px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 8px;
+}
+
+header h1 {
+    margin: 0 0 10px 0; /* Thêm khoảng cách dưới tiêu đề */
+    font-size: 28px;
+}
+
+nav {
+    display: flex; /* Sử dụng flex để sắp xếp các nút điều hướng */
+    flex-wrap: wrap; /* Cho phép các nút xuống dòng khi không đủ không gian */
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #003f8a;
+}
+.content-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.lab-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
+.content-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Lab buttons */
+.lab-buttons {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 15px;
+    margin-top: 10px;
+    
+}
+
+.lab-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Main content section */
+main {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.tabs button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.tabs button.active {
+    background-color: #0056b3;
+}
+
+.tabs button:hover {
+    background-color: #0056b3;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.requirement-content, .design-content, .implement-content {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Form Styling */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.preview-image {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 10px;
+    }
+
+    .tabs button {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    form {
+        grid-gap: 10px;
+    }
+}
+
+/* Lab buttons styling */
+.lab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Center align buttons */
+    gap: 15px;  /* Space between buttons */
+    margin-top: 10px;
+}
+
+.lab-button {
+    text-decoration: none;
+    padding: 8px 16px; /* Reduced padding for more space */
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
+.content-section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav-button.active {
+    background-color: #09386b; /* Màu nền đậm hơn nhẹ */
+    color: #f0f0f0;           /* Màu chữ hơi sáng hơn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng bóng */
+    transform: translateY(-2px);              /* Hiệu ứng nổi nhẹ */
+}
+.lab-button.active {
+    background-color: #0056b3; /* Màu tối hơn khi ấn */
+    transform: scale(0.95); /* Hiệu ứng thu nhỏ nhẹ */
+}

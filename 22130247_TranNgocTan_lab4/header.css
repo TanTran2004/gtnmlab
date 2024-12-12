@@ -1,0 +1,108 @@
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;    /* Căn giữa theo chiều ngang */
+}
+
+/* Header */
+header {
+    display: flex;               /* Sử dụng flexbox để căn giữa */
+    flex-direction: column;      /* Đặt các phần tử trong header theo cột */
+    align-items: center;         /* Căn giữa theo chiều ngang */
+    justify-content: center;     /* Căn giữa theo chiều dọc */
+    text-align: center;          /* Căn chữ ở giữa */
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+       
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #003f8a;
+}
+
+.nav-button.active {
+    background-color: #09386b;
+    color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Main Content Section */
+main {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Lab Buttons */
+.lab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.lab-button {
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
+.lab-button.active {
+    background-color: #0056b3;
+    transform: scale(0.95);
+}
+.content-section {
+ background-color: white;
+ padding: 10px;
+ border-radius: 8px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 10px;
+    }
+}

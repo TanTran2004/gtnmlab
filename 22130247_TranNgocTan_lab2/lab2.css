@@ -1,0 +1,340 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Containers */
+  .login-container,
+  .dashboard-container,
+  .coding-container,
+  .results-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2; 
+  }
+  
+  h1, h2 {
+    color: #00509e;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Forms */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  input[type="text"], 
+  input[type="password"], 
+  textarea, 
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus, 
+  input[type="password"]:focus, 
+  textarea:focus, 
+  select:focus {
+    border-color: #00509e;
+    outline: none;
+  }
+  
+  /* Buttons */
+  button, .coding-button, .submit-button, .dashboard-button, .try-again-button {
+    padding: 12px 20px;
+    color: white;
+    background-color: #00509e;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover, .coding-button:hover, .submit-button:hover, .dashboard-button:hover, .try-again-button:hover {
+    background-color: #003f7d;
+  }
+  
+  /* Specific Button Styles */
+  .run-button { 
+    background-color: #28a745; 
+  }
+  
+  .clear-button { 
+    background-color: #ffc107; 
+  }
+  
+  .run-button:hover { 
+    background-color: #218838; 
+  }
+  
+  .clear-button:hover { 
+    background-color: #e0a800; 
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-section label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .filter-section input[type="text"],
+  .filter-section select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Exercise List */
+  .exercise-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  @media (min-width: 600px) {
+    .exercise-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Exercise Card */
+  .exercise {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exercise h3 {
+    color: #00509e;
+    margin-bottom: 10px;
+  }
+  
+  .exercise p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #00509e;
+    color: white;
+  }
+  
+  td {
+    background-color: #f9f9f9;
+  }
+  
+  /* Output Section */
+  .output-section {
+    margin-top: 20px;
+  }
+  
+  .output-section pre {
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: auto;
+  }
+  
+  /* Links */
+  a {
+    color: #00509e;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .forgot-password {
+    font-size: 14px;
+    text-align: right;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  /* Editor Styles */
+  .editor {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    min-height: 200px;
+  }
+  
+  .editor-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .dashboard-container, .login-container, .coding-container, .results-container {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .filter-section {
+      flex-direction: column;
+    }
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative; /* Thêm dòng này */
+    z-index: 1; /* Đặt z-index thấp để nó nằm dưới .login-container */
+}
+
+
+header {
+    display: flex;
+    flex-direction: column; /* Đặt các phần tử trong header theo cột */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0 0 10px 0; /* Thêm khoảng cách dưới tiêu đề */
+    font-size: 28px;
+}
+
+nav {
+    display: flex; /* Sử dụng flex để sắp xếp các nút điều hướng */
+    flex-wrap: wrap; /* Cho phép các nút xuống dòng khi không đủ không gian */
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #003f8a;
+}
+.content-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.lab-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
+.content-section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Lab buttons */
+.lab-buttons {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-top: 10px;
+    
+}
+
+.lab-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
