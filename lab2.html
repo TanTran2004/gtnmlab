@@ -6,6 +6,7 @@
   <title>Login</title>
   <link rel="stylesheet" href="css/lab21.css">
   <link rel="stylesheet" href="css/lab1.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
@@ -15,6 +16,7 @@
               <a href="index.html" class="nav-button">Home</a>
               <a href="about.html" class="nav-button">About</a>
               <a href="lab1.html" class="nav-button active">Labs</a>
+              <a href="result.html" class="nav-button">Result</a>
           </nav>
       </header>
       <main>
@@ -30,18 +32,30 @@
           </section>
       </main>
     </div>
-  <div class="login-container">
-    <h2>Student Login</h2>
-    <form id="login-form" action="dashboard.html" method="GET">
-      <label for="username">Username/Email</label>
-      <input type="text" id="username" name="username" required>
-
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
-
-      <button type="submit">Login</button>
-      <a href="#" class="forgot-password">Forgot Password?</a>
-    </form>
+    <div class="container">
+      <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+          <div class="col-12 col-md-6 col-lg-4">
+              <div class="login-container bg-white p-4 rounded shadow">
+                  <h2 class="text-center mb-4">Student Login</h2>
+                  <form id="login-form" action="dashboard.html" method="GET">
+                      <div class="mb-3">
+                          <label for="username" class="form-label">Username/Email</label>
+                          <input type="text" id="username" name="username" class="form-control" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="password" class="form-label">Password</label>
+                          <input type="password" id="password" name="password" class="form-control" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary w-100">Login</button>
+                      <a href="#" class="d-block text-center mt-3 text-decoration-none text-primary">Forgot Password?</a>
+                  </form>
+              </div>
+          </div>
+      </div>
   </div>
+  <footer class="footer bg-dark text-white text-center py-3">
+    <p>&copy; by Trần Ngọc Tân</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

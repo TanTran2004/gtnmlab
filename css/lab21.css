@@ -6,15 +6,13 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa; /* Màu nền trang */
+    height: 100vh;
+    margin: 0;
     display: flex;
-    flex-direction: column; /* Added column layout */
-    justify-content: flex-start; /* Align items from top */
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Containers */
@@ -30,12 +28,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Header Styles */
-.wrapper {
-    width: 100%;
-    max-width: 1200px;
-    padding-bottom: 20px;
-}
+
 
 header {
     display: flex;
@@ -157,4 +150,18 @@ button:hover {
     text-align: right;
     margin-top: 10px;
     display: block;
+}
+.footer {
+    background-color: #343a40; /* Màu nền tối */
+    color: #ffffff; /* Màu chữ trắng */
+    text-align: center; /* Căn giữa nội dung */
+    padding: 1rem; /* Khoảng cách bên trong */
+
+    bottom: 0; /* Ở dưới cùng */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+}
+
+.footer p {
+    margin: 0; /* Loại bỏ khoảng cách mặc định */
 }

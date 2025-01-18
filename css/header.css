@@ -1,8 +1,11 @@
-/* Wrapper */
-.wrapper {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;    /* Căn giữa theo chiều ngang */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa; /* Màu nền trang */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Header */
@@ -12,7 +15,7 @@ header {
     align-items: center;         /* Căn giữa theo chiều ngang */
     justify-content: center;     /* Căn giữa theo chiều dọc */
     text-align: center;          /* Căn chữ ở giữa */
-    padding: 20px;
+    padding: 5px;
     background-color: #007BFF;
     color: white;
     border-radius: 8px;
@@ -88,6 +91,7 @@ main {
 
 .lab-button:hover {
     background-color: #0056b3;
+    color:#f0f0f0;
 }
 
 .lab-button.active {
@@ -105,4 +109,17 @@ main {
     .wrapper {
         padding: 10px;
     }
+}
+.footer {
+    background-color: #343a40; /* Màu nền tối */
+    color: #ffffff; /* Màu chữ trắng */
+    text-align: center; /* Căn giữa nội dung */
+    padding: 1rem; /* Khoảng cách bên trong */
+    bottom: 0; /* Ở dưới cùng */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+}
+
+.footer p {
+    margin: 0; /* Loại bỏ khoảng cách mặc định */
 }
